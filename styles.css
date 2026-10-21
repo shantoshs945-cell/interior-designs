@@ -162,6 +162,67 @@ h1, h2, h3, p { margin-top: 0; }
 .footer-wordmark .wordmark-name span { font-size: 7px; }
 .site-footer > p { margin: 0; color: var(--muted); font-family: var(--serif); font-size: 13px; font-style: italic; }
 .site-footer > a:nth-last-child(2), .site-footer > span { color: var(--muted); font-size: 8px; letter-spacing: 1px; }
+.footer-pages { display: flex; align-items: center; gap: 18px; }
+.footer-pages a { color: var(--muted); font-size: 8px; letter-spacing: 1px; }
+.footer-pages a:hover, .site-nav a[aria-current="page"] { color: #798775; }
+
+.story-hero, .reviews-hero { padding: 93px 20px 88px; text-align: center; }
+.story-hero .eyebrow, .reviews-hero .eyebrow { justify-content: center; }
+.story-hero h1, .reviews-hero h1 {
+  margin: 28px 0 17px;
+  font-family: var(--serif);
+  font-size: clamp(54px, 7vw, 82px);
+  font-weight: 400;
+  letter-spacing: -2px;
+  line-height: 1.1;
+}
+.story-hero h1 em, .reviews-hero h1 em, .story-copy h2 em, .values h2 em,
+.review-invite h2 em, .reviews-cta h2 em, .story-cta h2 em { color: #777d68; font-weight: 400; }
+.story-hero > p:last-child, .reviews-hero > p:last-child {
+  max-width: 490px;
+  margin: 0 auto;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.9;
+}
+.story-feature { display: grid; grid-template-columns: 1.05fr .75fr; gap: 9%; align-items: center; padding-top: 0; padding-bottom: 112px; }
+.story-image { position: relative; height: 470px; }
+.story-image img { object-position: center; }
+.story-image > span { position: absolute; right: 0; bottom: 0; padding: 12px 15px; background: var(--paper); color: var(--muted); font-size: 8px; letter-spacing: 1.2px; }
+.story-copy h2, .values h2, .review-invite h2, .reviews-cta h2, .story-cta h2 {
+  font-family: var(--serif);
+  font-size: clamp(40px, 4.4vw, 55px);
+  font-weight: 400;
+  letter-spacing: -1.5px;
+  line-height: 1.2;
+}
+.story-copy h2 { margin: 24px 0 18px; }
+.story-copy > p:not(.eyebrow) { color: var(--muted); font-size: 11px; line-height: 1.95; }
+.story-copy .underlined-link { margin-top: 10px; }
+.values { padding-top: 85px; padding-bottom: 105px; background: #efeee8; }
+.values .section-heading { margin-bottom: 39px; }
+.values h2 { margin-top: 20px; }
+.values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+.value-card { min-height: 198px; padding: 24px 23px; border-top: 1px solid #c9c9bf; }
+.value-card > span { color: var(--muted); font-size: 9px; letter-spacing: 1px; }
+.value-card h3 { margin: 23px 0 10px; font-family: var(--serif); font-size: 20px; font-weight: 400; }
+.value-card p { max-width: 260px; margin: 0; color: var(--muted); font-size: 10px; line-height: 1.8; }
+.story-cta, .reviews-cta { display: flex; flex-direction: column; align-items: center; padding: 95px 20px 100px; text-align: center; }
+.story-cta .eyebrow, .reviews-cta .eyebrow { justify-content: center; }
+.story-cta h2, .reviews-cta h2 { margin: 23px 0 24px; }
+.review-list { padding-top: 25px; padding-bottom: 100px; }
+.review-list .section-heading { margin-bottom: 30px; }
+.review-list .section-heading h2 { font-size: clamp(39px, 4.3vw, 54px); }
+.review-empty { min-height: 295px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 38px 24px; background: #efeee8; text-align: center; }
+.review-empty .quote-mark { height: 35px; margin-bottom: 7px; }
+.review-empty h3 { margin: 12px 0; font-family: var(--serif); font-size: 26px; font-weight: 400; }
+.review-empty > p { max-width: 420px; margin-bottom: 19px; color: var(--muted); font-size: 11px; line-height: 1.85; }
+.review-location { color: var(--muted); font-size: 8px; letter-spacing: 1.4px; }
+.review-invite { display: grid; grid-template-columns: 1fr 1fr; gap: 12%; align-items: end; padding-top: 73px; }
+.review-invite h2 { margin: 20px 0 0; font-size: clamp(39px, 4.2vw, 52px); }
+.review-invite-copy { max-width: 365px; }
+.review-invite-copy > p { margin-bottom: 19px; color: var(--muted); font-size: 11px; line-height: 1.9; }
+.reviews-cta { background: #efeee8; }
 
 @media (min-width: 1500px) {
   .hero { padding-right: max(7.2%, calc((100vw - 1280px) / 2)); padding-left: max(7.2%, calc((100vw - 1280px) / 2)); }
@@ -189,6 +250,13 @@ h1, h2, h3, p { margin-top: 0; }
   .approach-image { height: 510px; }
   .contact { padding-top: 58px; padding-bottom: 58px; }
   .site-footer { padding-right: 5%; padding-left: 5%; }
+  .site-header { padding-right: 3%; padding-left: 3%; }
+  .site-nav { gap: 18px; }
+  .story-feature { gap: 7%; padding-bottom: 85px; }
+  .story-image { height: 400px; }
+  .values { padding-top: 72px; padding-bottom: 80px; }
+  .value-card { padding-right: 15px; padding-left: 15px; }
+  .review-list { padding-bottom: 80px; }
 }
 
 @media (max-width: 640px) {
@@ -253,6 +321,34 @@ h1, h2, h3, p { margin-top: 0; }
   .site-footer > p { grid-column: 1; grid-row: 2; }
   .site-footer > a:nth-last-child(2) { grid-column: 2; grid-row: 1; }
   .site-footer > span { grid-column: 2; grid-row: 2; text-align: right; }
+  .story-hero, .reviews-hero { padding: 66px 23px 54px; }
+  .story-hero h1, .reviews-hero h1 { margin: 22px 0 14px; font-size: clamp(47px, 13vw, 62px); letter-spacing: -1.5px; }
+  .story-hero > p:last-child, .reviews-hero > p:last-child { max-width: 400px; font-size: 11px; }
+  .story-feature { grid-template-columns: 1fr; gap: 31px; padding-bottom: 65px; }
+  .story-image { height: 300px; margin-right: 12px; }
+  .story-image > span { font-size: 7px; }
+  .story-copy h2, .values h2, .review-invite h2, .reviews-cta h2, .story-cta h2 { font-size: clamp(39px, 10.5vw, 49px); }
+  .story-copy h2 { margin: 18px 0 12px; }
+  .story-copy > p:not(.eyebrow) { font-size: 10px; }
+  .values { padding-top: 59px; padding-bottom: 63px; }
+  .values .section-heading { margin-bottom: 24px; }
+  .values-grid { grid-template-columns: 1fr; gap: 0; }
+  .value-card { min-height: auto; padding: 19px 0; }
+  .value-card h3 { margin: 12px 0 6px; font-size: 19px; }
+  .value-card p { max-width: 350px; }
+  .story-cta, .reviews-cta { padding: 67px 21px 72px; }
+  .story-cta h2, .reviews-cta h2 { margin: 20px 0; }
+  .review-list { padding-top: 6px; padding-bottom: 66px; }
+  .review-list .section-heading { margin-bottom: 24px; }
+  .review-empty { min-height: 260px; padding: 30px 19px; }
+  .review-empty h3 { font-size: 22px; }
+  .review-invite { grid-template-columns: 1fr; gap: 17px; padding-top: 48px; }
+  .review-invite h2 { margin-top: 15px; }
+  .review-invite-copy > p { font-size: 10px; }
+  .site-footer { grid-template-columns: 1fr auto; }
+  .site-footer > .footer-pages { grid-column: 1; grid-row: 3; }
+  .site-footer > a:nth-last-child(2) { grid-column: 2; grid-row: 1; }
+  .site-footer > span { grid-column: 2; grid-row: 2; }
 }
 
 @media (prefers-reduced-motion: reduce) {
