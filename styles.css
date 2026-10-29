@@ -65,8 +65,7 @@ button { font: inherit; }
 }
 .hero::before { position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, var(--paper) 0%, var(--paper) 30%, rgb(247 246 242 / 92%) 43%, rgb(247 246 242 / 68%) 53%, transparent 68%); content: ""; pointer-events: none; }
 .hero-copy { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding: 20px 8% 45px 0; }
-.eyebrow { display: flex; align-items: center; gap: 10px; margin: 0; color: var(--muted); font-size: calc(9px * var(--body-text-scale)); font-weight: 500; letter-spacing: 2px; }
-.eyebrow > span { width: 18px; height: 1px; background: #838675; }
+.eyebrow { display: flex; align-items: center; margin: 0; color: var(--muted); font-size: calc(9px * var(--body-text-scale)); font-weight: 500; letter-spacing: 2px; }
 h1, h2, h3, p { margin-top: 0; }
 .hero h1, .intro h2, .section-heading h2, .approach h2, .contact h2 {
   font-family: var(--serif);
@@ -145,7 +144,6 @@ h1, h2, h3, p { margin-top: 0; }
 
 .contact { min-height: 385px; display: grid; grid-template-columns: 1.1fr .9fr; align-items: center; gap: 9%; padding-top: 68px; padding-bottom: 68px; color: white; background: var(--green); }
 .contact .eyebrow { color: #d2d3ca; }
-.contact .eyebrow > span { background: #c2c7b7; }
 .contact h2 { margin: 22px 0 13px; font-size: clamp(43px, 4.5vw, 57px); }
 .contact h2 em { color: #c5c8b5; }
 .contact-description { max-width: 340px; margin-bottom: 22px; color: #d3d4cb; }
@@ -160,10 +158,28 @@ h1, h2, h3, p { margin-top: 0; }
 .footer-wordmark .wordmark-name { font-size: calc(11px * var(--body-text-scale)); }
 .footer-wordmark .wordmark-name span { font-size: calc(7px * var(--body-text-scale)); }
 .site-footer > p { margin: 0; color: var(--muted); font-family: var(--serif); font-size: calc(13px * var(--body-text-scale)); font-style: italic; }
-.site-footer > a:nth-last-child(2), .site-footer > span { color: var(--muted); font-size: calc(8px * var(--body-text-scale)); letter-spacing: 1px; }
-.footer-pages { display: flex; align-items: center; gap: 18px; }
-.footer-pages a { color: var(--muted); font-size: calc(8px * var(--body-text-scale)); letter-spacing: 1px; }
-.footer-pages a:hover, .site-nav a[aria-current="page"] { color: #798775; }
+.site-footer > span { color: var(--muted); font-size: calc(8px * var(--body-text-scale)); letter-spacing: 1px; }
+.site-footer > a:not(.footer-wordmark), .footer-pages a {
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 14px;
+  border: 1px solid #bdbdb3;
+  border-radius: 4px;
+  color: var(--muted);
+  font-size: calc(8px * var(--body-text-scale));
+  letter-spacing: 1px;
+  transition: color .2s, background .2s, border-color .2s;
+}
+.site-footer > a:not(.footer-wordmark):hover, .footer-pages a:hover {
+  color: white;
+  background: var(--green);
+  border-color: var(--green);
+}
+.site-footer a:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
+.footer-pages { display: flex; align-items: center; gap: 10px; }
+.site-nav a[aria-current="page"] { color: #798775; }
 
 .story-hero, .reviews-hero { padding: 93px 20px 88px; text-align: center; }
 .story-hero .eyebrow, .reviews-hero .eyebrow { justify-content: center; }
@@ -316,7 +332,7 @@ h1, h2, h3, p { margin-top: 0; }
   .contact-location { margin-top: 17px; }
   .site-footer { min-height: 142px; display: grid; grid-template-columns: 1fr auto; gap: 12px 10px; padding: 24px 22px; }
   .site-footer > p { grid-column: 1; grid-row: 2; }
-  .site-footer > a:nth-last-child(2) { grid-column: 2; grid-row: 1; }
+  .site-footer > a:not(.footer-wordmark) { grid-column: 2; grid-row: 1; }
   .site-footer > span { grid-column: 2; grid-row: 2; text-align: right; }
   .story-hero, .reviews-hero { padding: 66px 23px 54px; }
   .story-hero h1, .reviews-hero h1 { margin: 22px 0 14px; font-size: clamp(47px, 13vw, 62px); letter-spacing: -1.5px; }
@@ -344,7 +360,7 @@ h1, h2, h3, p { margin-top: 0; }
   .review-invite-copy > p { font-size: calc(10px * var(--body-text-scale)); }
   .site-footer { grid-template-columns: 1fr auto; }
   .site-footer > .footer-pages { grid-column: 1; grid-row: 3; }
-  .site-footer > a:nth-last-child(2) { grid-column: 2; grid-row: 1; }
+  .site-footer > a:not(.footer-wordmark) { grid-column: 2; grid-row: 1; }
   .site-footer > span { grid-column: 2; grid-row: 2; }
 }
 
